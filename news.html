@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Новости фермы</title>
+<style>
+  body {
+    background-color: #ffffff; /* общий фон страницы */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Заголовок */
+  header {
+    position: relative;
+    background-color: #333333; /* фон заголовка */
+    color: #ffffff;
+    padding: 100px;
+    text-align: center;
+    font-size: 60px;
+  }
+
+  header button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #666666; /* начальный цвет фона */
+    transition: transform 0.5s ease, background-color 0.5s ease;
+  }
+
+  header button:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+  }
+  
+  #buttonsContainer {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .text-container {
+    width: calc(100% - 60px);
+    margin: 30px 30px;
+    padding: 20px;
+    border: 10px solid transparent;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-height: 200px;
+    border-image: linear-gradient(to right, #222222, #DDDDDD) 1;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  Новости фермы
+  <div id="buttonsContainer">
+    <button id="homeBtn">На главную</button>
+  </div>
+</header>
+
+<div class="text-container">
+
+</div>
+
+<script>
+    document.getElementById('homeBtn').addEventListener('click', function() {
+    window.location.href = 'index.html';
+  });
+</script>
+
+</body>
+</html>
